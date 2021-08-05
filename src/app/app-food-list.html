@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Style the header */
+    header {
+      background-color: #ff0000;
+      padding: 25px;
+      text-align: left;
+      font-size: 35px;
+      color: white;
+    }
+
+    .search-container {
+      padding: 30px;
+      display: grid;
+      place-items: center;
+      font-size: 15px;
+    }
+
+    #searchBox {
+      height: 20px;
+      width: 300px;
+    }
+
+    #name {
+      height: 25px;
+      width: 150px;
+    }
+
+    #calories {
+      height: 25px;
+      width: 150px;
+    }
+
+    #image {
+      height: 25px;
+      width: 150px;
+    }
+
+    #submit {
+      height: 25px;
+      width: 80px;
+    }
+
+    #newFood {
+      background-color: #ff0000;
+      color: white;
+      height: 25px;
+      width: 150px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+    }
+
+    .food-items {
+      margin-top: 10px;
+      padding: 10px;
+      background: #f5f5f5;
+      margin-top: 10px;
+      mask-border: auto;
+      border-block: solid;
+      cue-after: soft;
+      border-left: solid;
+      border-right: solid;
+      margin: 10px 290px 100px 290px;
+    }
+  </style>
+ </head>
+
+  <header>
+    <h2>Calory Tracker</h2>
+  </header>
+  <div id="headerContainer">
+    <div class="search-container">
+      <form action="/action_page.php">
+        <p align="center"> Search</p>
+        <input align="center" type="text" placeholder="" id="searchBox">
+      </form>
+    </div>
+
+    <div style="position:relative; left:290px; top:3px; padding:10px;" class="form-popup" id="addItemForm">
+      <form action="/action_page.php" id="form1" class="form-container">
+        <div class="add-item">
+          <button style="position:relative; right:0px; bottom:5px;" text-align="center" value="AddNewItem"type="button" id="newFood">Add new item</button>
+        </div>
+        <b>Name  </b><input id="name" type="text" placeholder="Enter Name" required />
+        <br />
+        <b>Calories  </b><input id="calories" type="text" placeholder="Enter Calories" required />
+        <br />
+        <b>Image  </b><input id="image" type="text" placeholder="Enter Image URL" required />
+      </form>
+    </div>
+
+    <div class="food-items">
+      <div class="media">
+        <div class="media-body">
+          <section class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4">
+              <img style="position: relative; height:125px; width:150px;" src="https://i2.wp.com/ceklog.kindel.com/wp-content/uploads/2013/02/firefox_2018-07-10_07-50-11.png?fit=641%2C618&ssl=1" alt="Generic placeholder image">
+            </div>
+            <label style="position:relative; right:150px; top:3px;" id="fr-name"><b>Apple</b></label><br />
+            <label style="position:relative; right:150px; top:3px;" id="fr-calories"><b>Calories - 95</b></label><br />
+            <input style="position:relative; right:150px; top:3px;" type="text" placeholder="Enter Qty" name="quantities" required>
+            <button style="position:relative; right:125px; top:3px;">Add</button>
+          </section>
+        </div>
+      </div>
